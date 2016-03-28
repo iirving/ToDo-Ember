@@ -12,13 +12,13 @@ export default Ember.Route.extend({
       let item = this.store.createRecord('todo', {
           title: todoitem,
           isCompleted: false
-        });
-      item.save().then(function(){
+        }).save().then(function(){
         controller.set('new-todo', 'ian');
         let v  = controller.get('new-todo');
-        Logger.info('new-todo=' + v);
+        Logger.info('controller new-todo=' + v);
       });
-      //controller.set('new-todo', '');
+       this.set('new-todo', 'tom');
+Logger.info('this new-todo=' + this.get('new-todo'));
       }
 
     },
