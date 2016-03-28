@@ -1,0 +1,10 @@
+<li class="{{if todo.isCompleted 'completed'}}">
+      <input type="checkbox" class="toggle" {{action 'toggleCompleted' todo}}>
+      <label>
+        {{todo.title}}
+        {{#unless todo.isCompleted}}
+          ({{todo.id}})
+        {{/unless}}
+      </label>
+      <button class="destroy" {{action 'removeItem' todo}}></button>
+</li>

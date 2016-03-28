@@ -1,7 +1,17 @@
 # Todo-ember
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+The is Yet Another JavaScript MVC Ember ToDo app.
+
+Build with Ember 2.4.3 (cuurent as of March 28th 2016)
+
+Still to do features:
+* clearing new-todo input test field apoun successful adding value.
+* "Clear completed" action button which deletes all items isCompleted = true.
+* the "Active" and "Completed" nested routes
+* editing text of existing todo items
+* real (or real'er) persitance. currently jusr fixtures.
+* testing, cause it is 2016!
+
 
 ## Prerequisites
 
