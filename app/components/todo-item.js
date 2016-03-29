@@ -1,5 +1,5 @@
 import Ember from 'ember';
-
+const {Logger}= Ember;
 export default Ember.Component.extend({
   tagName: "li",
   classNameBindings: ['editing'],
@@ -10,7 +10,7 @@ export default Ember.Component.extend({
     },
     submitTodo() {
       let todo = this.get('todo');
-      if (todo.get('title') === "") {
+      if (todo.get('title').trim() === "") {
         todo.destroyRecord();
       } else {
         todo.save();
@@ -26,6 +26,7 @@ export default Ember.Component.extend({
       }
     },
     removeItem(item) {
+      Logger.info('doing removeItem');
       item.destroyRecord();
     }
   }
