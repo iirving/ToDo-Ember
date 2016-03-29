@@ -12,9 +12,7 @@ export default Ember.Component.extend({
       }
     },
     removeItem(item) {
- //     var id = item.id
-//      alert('this will remove the todo item.'+ id);
-        item.destroyRecord();
+      item.destroyRecord();
     }
   }
 });
