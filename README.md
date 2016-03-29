@@ -9,7 +9,7 @@ Build with Ember 2.4.3 (cuurent as of March 28th 2016)
 * ~clearing new-todo input test field apoun successful adding value.~
 * "Clear completed" action button which deletes all items isCompleted = true.
 * the "Active" and "Completed" nested routes
-* editing text of existing todo items
+* ~editing text of existing todo items~
 * real (or real'er) persitance. currently jusr fixtures.
 * testing, cause it is 2016!
 
