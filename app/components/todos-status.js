@@ -11,14 +11,14 @@ export default Ember.Component.extend({
   }),
   actions: {
     clearAllCompleted(todos) {
-//      Logger.info('todos=' + todos.length);
-  //  var todos2 = this.get('todos');
- //     var dd = this.store.query('todos', { isCompleted: true  });
-//   var done = this.store.filterBy('todos', {'isCompleted', true});
-   // var done = this.store.filter('isCompleted', true);
-    //  Logger.info('done=' + done.length);
-    // done.deleteRecord();
-    Logger.info('eof clearAllCompleted');
+      Logger.info('clearAllCompleted=');
+      let completed = this.get('todos').filterBy('isCompleted', true);
+      completed.forEach((todo) => {
+          //this.sendAction('deleteTodo', todo);
+          Logger.info('destroyRecord='+'todo.title');
+          todo.destroyRecord();
+      });
+      Logger.info('eof clearAllCompleted');
     }
   }
 });

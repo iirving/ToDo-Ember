@@ -1,5 +1,5 @@
 import Ember from 'ember';
-/*jshint strict: true */
+
 const {Logger}= Ember;
 
 export default Ember.Route.extend({

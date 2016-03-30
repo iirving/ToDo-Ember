@@ -26,7 +26,7 @@ export default Ember.Component.extend({
       }
     },
     removeItem(item) {
-      Logger.info('doing removeItem');
+      Logger.info('doing removeItem in todo-item');
       item.destroyRecord();
     }
   }
