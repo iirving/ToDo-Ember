@@ -10,9 +10,9 @@ export default Ember.Component.extend({
     return todos.filterBy('isCompleted', true).get('length');
   }),
   actions: {
-    clearAllCompleted(todos) {
+    clearAllCompleted() {
       Logger.info('clearAllCompleted=');
-      let controller = this;
+//      let controller = this;
       let completed = this.get('todos').filterBy('isCompleted', true);
       Logger.info('clearAllCompleted length='+completed.length);
       completed.forEach((todo) => {
