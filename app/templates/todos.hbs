@@ -1,12 +1,16 @@
 <section id="todoapp">
   <header id="header">
-    <h1>todos</h1>
+    <h1>
+      {{#link-to 'todos'}}
+        ToDo MVC
+      {{/link-to}}
+    </h1>
     {{todo-input action="createTodo"}}
   </header>
 
   <section id="main">
-    {{todos-list todos=model action="deleteTodo"}}
+    {{todos-list todos=model}}
   </section>
-  {{todos-status todos=model}}
+  {{todos-status todos=model action="deleteTodo"}}
 
 </section>

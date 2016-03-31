@@ -7,10 +7,10 @@ Build with Ember 2.4.3 (cuurent as of March 28th 2016)
 ## Still to do features (to-do list for the to-do App?):
 
 * ~~clearing new-todo input test field apoun successful adding value.~~
-* "Clear completed" action button which deletes all items isCompleted = true.
+* ~~"Clear completed" action button which deletes all items isCompleted = true.~~
 * the "Active" and "Completed" nested routes
 * ~~editing text of existing todo items~~
-* real (or real'er) persitance. currently jusr fixtures.
+* real (or real'er) persitance. currently just fixtures.
 * testing, cause it is 2016!
 
 

@@ -12,11 +12,13 @@ export default Ember.Component.extend({
   actions: {
     clearAllCompleted(todos) {
       Logger.info('clearAllCompleted=');
+      let controller = this;
       let completed = this.get('todos').filterBy('isCompleted', true);
+      Logger.info('clearAllCompleted length='+completed.length);
       completed.forEach((todo) => {
-          //this.sendAction('deleteTodo', todo);
-          Logger.info('destroyRecord='+'todo.title');
+       //   this.sendAction('deleteTodo', todo);
           todo.destroyRecord();
+//          Logger.info('did we send destroy?')
       });
       Logger.info('eof clearAllCompleted');
     }

@@ -7,7 +7,6 @@ export default Ember.Route.extend({
         createTodo(newTitle) {
           if (newTitle.trim()) {
            Logger.info('doing createTodo ('+newTitle.trim()+")");
-
           this.store.createRecord('todo', {
             title: newTitle,
             isCompleted: false
@@ -17,7 +16,6 @@ export default Ember.Route.extend({
           Logger.info('doing deleteTodo');
           todo.destroyRecord();
         }
-
       },
 
       model: function() {
