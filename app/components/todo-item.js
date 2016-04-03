@@ -1,5 +1,5 @@
 import Ember from 'ember';
-const {Logger}= Ember;
+
 export default Ember.Component.extend({
   tagName: "li",
   classNameBindings: ['editing'],
@@ -26,7 +26,7 @@ export default Ember.Component.extend({
       }
     },
     removeItem(item) {
-      Logger.info('doing removeItem in todo-item');
+      Ember.Logger.info('doing removeItem in todo-item');
       item.destroyRecord();
     }
   }

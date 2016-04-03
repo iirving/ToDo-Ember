@@ -32,10 +32,10 @@ test('we can toggle the complete state of a item.', function(assert) {
   visit('/');
   andThen(function() {
     let itemClass = find(itemSelector+' label').attr("class");
-    alert(itemClass);
+//    alert(itemClass);
     keyEvent(itemSelector + ' input', 'keyup', 13);
     andThen(function() {
-      alert(find(itemSelector+' label').attr("class"));
+  //    alert(find(itemSelector+' label').attr("class"));
       assert.notEqual(findWithAssert(itemSelector+' label').attr("class"), itemClass);
     });
   });

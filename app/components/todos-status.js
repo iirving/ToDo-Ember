@@ -1,5 +1,4 @@
 import Ember from 'ember';
-const {Logger}= Ember;
 export default Ember.Component.extend({
   remaining: Ember.computed('todos.@each.isCompleted', function() {
     var todos = this.get('todos');
@@ -11,16 +10,16 @@ export default Ember.Component.extend({
   }),
   actions: {
     clearAllCompleted() {
-      Logger.info('clearAllCompleted=');
+      Ember.Logger.info('clearAllCompleted=');
 //      let controller = this;
       let completed = this.get('todos').filterBy('isCompleted', true);
-      Logger.info('clearAllCompleted length='+completed.length);
+      Ember.Logger.info('clearAllCompleted length='+completed.length);
       completed.forEach((todo) => {
        //   this.sendAction('deleteTodo', todo);
           todo.destroyRecord();
 //          Logger.info('did we send destroy?')
       });
-      Logger.info('eof clearAllCompleted');
+      Ember.Logger.info('eof clearAllCompleted');
     }
   }
 });
