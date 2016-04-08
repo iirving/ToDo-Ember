@@ -1,3 +1,6 @@
-// import DS from 'ember-data';
+import DS from 'ember-data';
 
-export { default } from 'ember-data-fixture-adapter';
+export default DS.RESTAdapter.extend({
+
+});
+//from 'ember-data-fixture-adapter';

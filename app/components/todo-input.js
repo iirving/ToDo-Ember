@@ -6,7 +6,6 @@ export default Ember.Component.extend({
       'use strict';
       this.sendAction('action', newTitle);
       this.set('newTitle', '');
-    }
-  }
+    },
+  },
 });
-
